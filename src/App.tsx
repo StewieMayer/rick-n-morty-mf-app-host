@@ -1,11 +1,17 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MfCharacters from "./remotes/MfCharacters";
+import Layout from "./components/layout/Layout";
 
 const App = () => {
-  return <BrowserRouter>
-    <Routes>
-     <Route path="/" element={<div className="flex min-w-screen bg-black text-white p-2">Hello Module Federation!</div>} /> 
-    </Routes>
-  </BrowserRouter>;
+  return (
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<MfCharacters />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
+  );
 };
 
 export default App;
