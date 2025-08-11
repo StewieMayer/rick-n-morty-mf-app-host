@@ -3,7 +3,8 @@
     "target": "es6",
     "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "mf-characters/MfCharacters": ["src/remotes/StandaloneCharactersApp.tsx"]
     },
     "module": "esnext",
     "moduleResolution": "node",
