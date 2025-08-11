@@ -24,6 +24,14 @@ module.exports = (env, argv) => {
         "@pages": path.resolve(__dirname, "src/pages"),
         "@utils": path.resolve(__dirname, "src/utils"),
         "@styles": path.resolve(__dirname, "src/styles"),
+        ...(isStandalone
+          ? {
+              "mf-characters/MfCharacters": path.resolve(
+                __dirname,
+                "src/remotes/StandaloneCharactersApp.tsx"
+              ),
+            }
+          : {}),
       },
     },
     module: {
