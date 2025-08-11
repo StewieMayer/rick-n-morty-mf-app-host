@@ -51,6 +51,8 @@ module.exports = (env, argv) => {
           : {
               "mf-characters":
                 "mf-characters@http://localhost:3001/re-mf-characters.js",
+              "mf-character-detail":
+                "mf-character-detail@http://localhost:3002/re-mf-character-detail.js",
             },
         shared: {
           react: {
