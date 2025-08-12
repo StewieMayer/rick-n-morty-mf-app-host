@@ -19,10 +19,9 @@ module.exports = (env, argv) => {
       extensions: [".ts", ".tsx", ".js", ".jsx"],
       alias: {
         "@": path.resolve(__dirname, "src"),
+        "@images": path.resolve(__dirname, "src/assets/images"),
         "@components": path.resolve(__dirname, "src/components"),
         "@rutes": path.resolve(__dirname, "src/routes"),
-        "@pages": path.resolve(__dirname, "src/pages"),
-        "@utils": path.resolve(__dirname, "src/utils"),
         "@styles": path.resolve(__dirname, "src/styles"),
         ...(isStandalone
           ? {
@@ -46,6 +45,10 @@ module.exports = (env, argv) => {
           use: ["style-loader", "css-loader", "postcss-loader"],
           exclude: /node_modules/,
         },
+        {
+          test: /\.(png|svg|jpe?g|gif)$/i,
+          type: 'asset/resource'
+        }
       ],
     },
     plugins: [

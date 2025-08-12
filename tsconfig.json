@@ -3,8 +3,10 @@
     "target": "es6",
     "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"],
-      "mfCharacters/MfCharacters": ["src/remotes/StandaloneCharactersApp.tsx"]
+      "@/*": ["src/*"],
+      "mfCharacters/MfCharacters": ["src/remotes/StandaloneCharactersApp.tsx"],
+      "@images/*": ["src/assets/images/*"],
+      "@components/*": ["src/components/*"],
     },
     "module": "esnext",
     "moduleResolution": "node",
