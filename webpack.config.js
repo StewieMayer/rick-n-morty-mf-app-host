@@ -13,6 +13,7 @@ module.exports = (env, argv) => {
     output: {
       filename: "bundle.js",
       path: path.resolve(__dirname, "dist"),
+      publicPath: '/',
       clean: true,
     },
     resolve: {
@@ -29,6 +30,10 @@ module.exports = (env, argv) => {
               "mfCharacters/MfCharacters": path.resolve(
                 __dirname,
                 "src/remotes/StandaloneCharactersApp.tsx"
+              ),
+              "mfCharacterDetail/MfCharacterDetail": path.resolve(
+                __dirname,
+                "src/remotes/StandAloneCharacterDetailApp.tsx"
               ),
             }
           : {}),
@@ -48,8 +53,8 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.(png|svg|jpe?g|gif)$/i,
-          type: 'asset/resource'
-        }
+          type: "asset/resource",
+        },
       ],
     },
     plugins: [
@@ -61,8 +66,10 @@ module.exports = (env, argv) => {
         remotes: isStandalone
           ? {}
           : {
-              "mfCharacters":
+              mfCharacters:
                 "mfCharacters@http://localhost:3001/re-mf-characters.js",
+              mfCharacterDetail:
+                "mfCharacterDetail@http://localhost:3002/re-mf-character-detail.js",
             },
         shared: {
           react: {
@@ -84,7 +91,10 @@ module.exports = (env, argv) => {
       port: 3000,
       open: true,
       hot: true,
-      historyApiFallback: true,
+      historyApiFallback: {
+        disableDotRule: true,
+        index: "/index.html",
+      },
     },
   };
 };
