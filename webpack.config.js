@@ -21,7 +21,8 @@ module.exports = (env, argv) => {
         "@": path.resolve(__dirname, "src"),
         "@images": path.resolve(__dirname, "src/assets/images"),
         "@components": path.resolve(__dirname, "src/components"),
-        "@rutes": path.resolve(__dirname, "src/routes"),
+        "@remotes": path.resolve(__dirname, "src/remotes"),
+        "@routes": path.resolve(__dirname, "src/routes"),
         "@styles": path.resolve(__dirname, "src/styles"),
         ...(isStandalone
           ? {
