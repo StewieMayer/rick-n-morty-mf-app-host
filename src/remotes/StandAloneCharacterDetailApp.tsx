@@ -1,7 +1,5 @@
 const StandAloneCharacterDetailApp: React.FC = () => {
-  return <div>
-    Detail App          
-                </div>;
+  return <div>Detail App</div>;
 };
 
 export default StandAloneCharacterDetailApp;
