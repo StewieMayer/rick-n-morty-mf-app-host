@@ -5,6 +5,7 @@
     "paths": {
       "@/*": ["src/*"],
       "mfCharacters/MfCharacters": ["src/remotes/StandaloneCharactersApp.tsx"],
+      "mfCharacterDetail/MfCharacterDetail": ["src/remotes/StandAloneCharacterDetailApp.tsx"],
       "@images/*": ["src/assets/images/*"],
       "@components/*": ["src/components/*"],
     },
