@@ -1,5 +1,5 @@
-import MfCharacterDetail from "@/remotes/MfCharacterDetail";
-import MfCharacters from "@/remotes/MfCharacters";
+import MfCharacterDetail from "@remotes/MfCharacterDetail";
+import MfCharacters from "@remotes/MfCharacters";
 import { Route, Routes } from "react-router-dom";
 
 const PublicRoutes: React.FC = () => {
