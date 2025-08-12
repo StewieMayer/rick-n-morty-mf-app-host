@@ -46,4 +46,4 @@ npm run coverage
 
 ## Autor
 
-Antonio
+Antonio Amaya (Stewie Mayer)
