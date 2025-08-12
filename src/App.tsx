@@ -1,14 +1,12 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import MfCharacters from "@remotes/MfCharacters";
-import Layout from "@components/layout/Layout";
+import Layout from "@/components/layout/Layout";
+import { BrowserRouter } from "react-router-dom";
+import PublicRoutes from "@routes/PublicRoutes";
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Layout>
-        <Routes>
-          <Route path="/" element={<MfCharacters />} />
-        </Routes>
+        <PublicRoutes />
       </Layout>
     </BrowserRouter>
   );
