@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 
 const RemoteCharactersApp = lazy(() =>
-  import("mf-characters/MfCharacters").then((module) => ({
+  import("mfCharacters/MfCharacters").then((module) => ({
     default: module.default,
   }))
 );

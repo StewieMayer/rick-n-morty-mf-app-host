@@ -26,7 +26,7 @@ module.exports = (env, argv) => {
         "@styles": path.resolve(__dirname, "src/styles"),
         ...(isStandalone
           ? {
-              "mf-characters/MfCharacters": path.resolve(
+              "mfCharacters/MfCharacters": path.resolve(
                 __dirname,
                 "src/remotes/StandaloneCharactersApp.tsx"
               ),
@@ -57,23 +57,21 @@ module.exports = (env, argv) => {
         remotes: isStandalone
           ? {}
           : {
-              "mf-characters":
-                "mf-characters@http://localhost:3001/re-mf-characters.js",
-              "mf-character-detail":
-                "mf-character-detail@http://localhost:3002/re-mf-character-detail.js",
+              "mfCharacters":
+                "mfCharacters@http://localhost:3001/re-mf-characters.js",
             },
         shared: {
           react: {
             singleton: true,
             requiredVersion: dependencies.react,
-            eager: isStandalone,
+            eager: true,
           },
           "react-dom": {
             singleton: true,
             requiredVersion: dependencies["react-dom"],
-            eager: isStandalone,
+            eager: true,
           },
-          "react-router-dom": { singleton: true, eager: isStandalone },
+          "react-router-dom": { singleton: true, eager: true },
         },
       }),
     ],

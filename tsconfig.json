@@ -4,7 +4,7 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
-      "mf-characters/MfCharacters": ["src/remotes/StandaloneCharactersApp.tsx"]
+      "mfCharacters/MfCharacters": ["src/remotes/StandaloneCharactersApp.tsx"]
     },
     "module": "esnext",
     "moduleResolution": "node",
