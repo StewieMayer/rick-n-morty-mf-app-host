@@ -25,9 +25,9 @@ jobs:
 
       - name: Clone monorepo
         run: |
-          git clone https://github.com/StewieMayer/rick-n-morty-mf-app.git
+          git clone git@github.com:StewieMayer/rick-n-morty-mf-app.git
           cd rick-n-morty-mf-app
-          git remote add mf-host https://github.com/StewieMayer/rick-n-morty-mf-app-host.git
+          git remote add mf-host git@github.com:StewieMayer/rick-n-morty-mf-app-host.git
           git fetch mf-host
           git subtree pull --prefix=mf-host mf-host main --squash
           git push origin main
